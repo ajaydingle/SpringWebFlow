@@ -5,6 +5,7 @@
 <web-app>
 	<display-name>Spring Web Flow Application</display-name>
 
+    <!--  Added by Ajay: Configuring DispatcherServlet with url mapping -->
 	<servlet>
 		<servlet-name>SpringWebFlowDemo</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>

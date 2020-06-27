@@ -14,8 +14,27 @@
 
 	<ctx:annotation-config></ctx:annotation-config>
 	
+	<!--  Addded by Ajay: specifying the package name to load the classes into classpath.
+	                      Spring will auto-register those classes as spring beans.
+	
+	        Official Defination:
+	             Scans the classpath for annotated components that will be auto-registered as Spring beans. -->
+	             
 	<ctx:component-scan base-package="com.example"></ctx:component-scan>
 	
+	<!--  Added by Ajay :  It will load the flow-defination.xml into classpath -->
 	<import resource="flow-defination.xml"/>
+	
+	<!--  Added by Ajay : This is added to read the files from the folders created inside a webapp like css, images, js etc.
+	
+	      Official Defination:
+			Configures a handler for serving static resources such as images, js, and, css files with cache headers optimized 
+ 			for efficient loading in a web browser. 
+ 			Allows resources to be served out of any path that is reachable via Spring's Resource handling.
+	
+	 -->
+	 
+	<mvc:resources location="/css/" mapping="/css/**"/>
+    <mvc:resources location="/images/" mapping="/images/**"/>
 
 </beans>

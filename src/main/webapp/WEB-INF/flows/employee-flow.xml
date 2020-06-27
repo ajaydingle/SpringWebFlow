@@ -6,6 +6,11 @@
 
 
 	<view-state id="employee" view="employee">
+	
+	    <on-render>
+	    	<evaluate expression="employeeController.genderList(flowRequestContext, externalContext)" result="genderList"/>
+	    </on-render>
+	    
 		<transition on="submitemployee" to="employee">
 			<evaluate expression="employeeController.collectEmployeeData(flowRequestContext, externalContext)" />
 		</transition>
@@ -15,5 +20,5 @@
 	<!-- <view-state id="success" /> -->
 
 	<!-- <view-state id="failure" /> -->
-
+	
 </flow>
