@@ -1,0 +1,7 @@
+
+Issue 1: Property not found "employeeController"
+
+Solution: 1) Refresh the project.
+          2) Project menu --> Clean..
+          3) Clean the tomcat server.
+                Right click on server --> Clean 
